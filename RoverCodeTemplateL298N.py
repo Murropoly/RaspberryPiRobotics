@@ -2,12 +2,13 @@
 import time
 import RPi.GPIO as GPIO
 
+#GPIO pin setup 1
 a = 1
 b = 2
 c = 3
 d = 4
 
-#GPIO pin setup
+#GPIO pin setup 2
 GPIO.setmode(GPIO.BCM)
 GPIO.setup(a, GPIO.OUT)
 GPIO.setup(b, GPIO.OUT)
