@@ -1,3 +1,8 @@
+'''
+This is a module made for the L298N
+Made by Tyler Muranaka
+
+'''
 #Imports all needed packages
 import time
 import RPi.GPIO as GPIO
