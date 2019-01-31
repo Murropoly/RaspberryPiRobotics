@@ -22,6 +22,7 @@ GPIO.setup(d, GPIO.OUT)
 
 #Makes the robot go forward
 def Forward():
+    print("Forward")
     GPIO.output(a,False)
     GPIO.output(b,True)
     GPIO.output(c,False)
@@ -29,6 +30,7 @@ def Forward():
 
 #Makes the robot go in REVERSE
 def Reverse():
+    print("Reverse")
     GPIO.output(a,True)
     GPIO.output(b,False)
     GPIO.output(c,True)
@@ -36,6 +38,7 @@ def Reverse():
 
 #Turns the robot RIGHT
 def TurnRight():
+    print("Turning Right")
     GPIO.output(a,True)
     GPIO.output(b,False)
     GPIO.output(c,False)
@@ -43,6 +46,7 @@ def TurnRight():
 
 #Turns the robot LEFT
 def TurnLeft():
+    print("Turning Left")
     GPIO.output(a,False)
     GPIO.output(b,True)
     GPIO.output(c,True)
@@ -50,6 +54,7 @@ def TurnLeft():
 
 #STOPS the Robots motors completly
 def Stop():
+    print("Stoping
     GPIO.output(a,False)
     GPIO.output(b,False)
     GPIO.output(c,False)
