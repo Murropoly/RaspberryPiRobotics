@@ -4,13 +4,14 @@ from signal import pause
 import RPi.GPIO as GPIO
 import time
 
+bd = BlueDot()
 Forward() = RPiRobot.Forward()
 Reverse() = RPiRobot.Reverse()
 TurnRight() = RPiRobot.TurnRight()
 TurnLeft() = RPiRobot.TurnLeft()
 Stop() = RPiRobot.Stop()
 
-def dpad(pos):
+def move(pos):
     if pos.top:
         Forward()
     elif pos.bottom:
@@ -21,5 +22,9 @@ def dpad(pos):
         TurnLeft()
     elif pos.middle:
         
-bd = BlueDot()
-bd.when_pressed = dpad
+def stop():
+    RPiRobot.Cleanup()
+
+bd.when_pressed = move
+bd.when_moved = move
+bd.when_released = stop

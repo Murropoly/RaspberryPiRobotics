@@ -1,9 +1,10 @@
 from bluedot import BlueDot
 from signal import pause
 import RPi.GPIO as GPIO
-import time
 
-def dpad(pos):
+bd = BlueDot()
+
+def move(pos):
     if pos.top:
         
     elif pos.bottom:
@@ -14,5 +15,10 @@ def dpad(pos):
         
     elif pos.middle:
         
-bd = BlueDot()
-bd.when_pressed = dpad
+def stop():
+    
+
+    
+bd.when_pressed = move
+bd.when_moved = move
+bd.when_released = stop
