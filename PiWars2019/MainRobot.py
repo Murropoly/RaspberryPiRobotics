@@ -1,8 +1,7 @@
-import RPiRobot
 from bluedot import BlueDot
 from signal import pause
 import RPi.GPIO as GPIO
-import time
+import RPiRobot
 
 bd = BlueDot()
 Forward() = RPiRobot.Forward()
@@ -23,7 +22,7 @@ def move(pos):
     elif pos.middle:
         
 def stop():
-    RPiRobot.Cleanup()
+    Stop()
 
 bd.when_pressed = move
 bd.when_moved = move
