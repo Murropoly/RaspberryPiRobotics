@@ -54,7 +54,7 @@ def TurnLeft():
 
 #STOPS the Robots motors completly
 def Stop():
-    print("Stoping
+    print("Stoping")
     GPIO.output(a,False)
     GPIO.output(b,False)
     GPIO.output(c,False)
