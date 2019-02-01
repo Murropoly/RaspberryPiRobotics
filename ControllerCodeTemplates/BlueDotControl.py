@@ -16,9 +16,7 @@ def move(pos):
     elif pos.middle:
         
 def stop():
-    
-
-    
+      
 bd.when_pressed = move
 bd.when_moved = move
 bd.when_released = stop
