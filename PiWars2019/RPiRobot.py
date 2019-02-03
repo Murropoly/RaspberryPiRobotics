@@ -7,13 +7,13 @@ import RPi.GPIO as GPIO
 import time
 
 #GPIO pin setup 1
-a = 1
-b = 2
-c = 3
-d = 4
+a = 7
+b = 8
+c = 9
+d = 10
 
 #GPIO pin setup 2
-GPIO.setmode(GPIO.BCM)
+GPIO.setmode(GPIO.BOARD)
 GPIO.setup(a, GPIO.OUT)
 GPIO.setup(b, GPIO.OUT)
 GPIO.setup(c, GPIO.OUT)
@@ -21,7 +21,6 @@ GPIO.setup(d, GPIO.OUT)
 
 #Makes the robot go forward
 def Forward():
-    print("Forward")
     GPIO.output(a,False)
     GPIO.output(b,True)
     GPIO.output(c,False)
@@ -29,7 +28,6 @@ def Forward():
 
 #Makes the robot go in REVERSE
 def Reverse():
-    print("Reverse")
     GPIO.output(a,True)
     GPIO.output(b,False)
     GPIO.output(c,True)
@@ -37,7 +35,6 @@ def Reverse():
 
 #Turns the robot RIGHT
 def TurnRight():
-    print("Turning Right")
     GPIO.output(a,True)
     GPIO.output(b,False)
     GPIO.output(c,False)
@@ -45,7 +42,6 @@ def TurnRight():
 
 #Turns the robot LEFT
 def TurnLeft():
-    print("Turning Left")
     GPIO.output(a,False)
     GPIO.output(b,True)
     GPIO.output(c,True)
@@ -53,12 +49,10 @@ def TurnLeft():
 
 #STOPS the Robots motors completly
 def Stop():
-    print("Stoping")
     GPIO.output(a,False)
     GPIO.output(b,False)
     GPIO.output(c,False)
     GPIO.output(d,False)
 
 def Cleanup():
-    print("Cleaning Up GPIO Pins")
     GPIO.cleanup()
