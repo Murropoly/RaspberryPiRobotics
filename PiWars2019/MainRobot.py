@@ -4,25 +4,21 @@ import RPi.GPIO as GPIO
 import RPiRobot
 
 bd = BlueDot()
-Forward() = RPiRobot.Forward()
-Reverse() = RPiRobot.Reverse()
-TurnRight() = RPiRobot.TurnRight()
-TurnLeft() = RPiRobot.TurnLeft()
-Stop() = RPiRobot.Stop()
 
 def move(pos):
     if pos.top:
-        Forward()
+        RPiRobot.Forward()
     elif pos.bottom:
-        Reverse()
+        RPiRobot.Reverse()
     elif pos.left:
-        TurnRight()
+        RPiRobot.TurnLeft()
     elif pos.right:
-        TurnLeft()
+        RPiRobot.TurnRight()
     elif pos.middle:
+        RPiRobot.Cleanup()
         
 def stop():
-    Stop()
+    RPiRobot.Stop()
 
 bd.when_pressed = move
 bd.when_moved = move
