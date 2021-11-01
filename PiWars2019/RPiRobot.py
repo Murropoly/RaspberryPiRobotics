@@ -1,5 +1,5 @@
 '''
-This is a module made for the L298N
+This code is intended for use with the L298N motor controller
 Made by Tyler Muranaka
 '''
 #Imports all needed packages
